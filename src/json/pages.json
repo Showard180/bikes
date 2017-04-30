@@ -1,0 +1,28 @@
+{
+  "login": {
+    "title": "Login to your account",
+    "form": {
+      "inputs": [
+        {
+          "type": "text",
+          "key-type": "phone-pad",
+          "title": "Phone Number",
+          "text": "Type your phone number here",
+          "secure": false
+        },
+        {
+          "type": "text",
+          "title": "Password",
+          "text": "Type your phone number here",
+          "secure": true
+        },
+        {
+          "type": "button",
+          "text": "Submit",
+          "accessibility": "Submit your details",
+          "function": "submitLogin"
+        }
+      ]
+    }
+  }
+}
