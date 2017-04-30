@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 import inputs from './index';
 
@@ -19,6 +19,15 @@ export default class Form extends Component {
               />
             )
           })
+        }
+        {
+          this.props.links.map((o, i) => (
+            <Text
+              key={i}
+              onPress={() => this.props.nav.push({Title: o.to})}>
+              {o.text}
+            </Text>
+          ))
         }
       </View>
     )

@@ -22,6 +22,12 @@
           "accessibility": "Submit your details",
           "function": "submitLogin"
         }
+      ],
+      "links": [
+        {
+          "to": "Register",
+          "text": "Don't have an account?"
+        }
       ]
     }
   }
