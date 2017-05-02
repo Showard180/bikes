@@ -1,0 +1,17 @@
+{
+  "Login": {
+    "title": "Login",
+    "component": "LoginForm",
+    "navigationBarHidden": true
+  },
+  "Register": {
+    "title": "Register",
+    "component": "RegisterForm",
+    "navigationBarHidden": false
+  },
+  "UserProfile": {
+    "title": "UserProfile",
+    "component": "UserProfile",
+    "navigationBarHidden": true
+  }
+}

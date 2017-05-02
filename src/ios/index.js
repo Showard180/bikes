@@ -1,8 +1,5 @@
-import React, {Component} from 'react';
-import {View} from 'react-native';
+import Nav from './nav';
 
-import {LoginForm} from './pages';
-
-export default () => (
-  <LoginForm />
-);
+module.exports = {
+  nav: Nav
+};

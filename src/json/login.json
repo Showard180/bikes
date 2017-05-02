@@ -1,19 +1,24 @@
 {
-  "login": {
-    "title": "Login to your account",
-    "form": {
-      "inputs": [
+  "title": "Login to your account",
+  "components": [
+    {
+      "type": "form",
+      "shards": [
         {
           "type": "text",
           "key-type": "phone-pad",
           "title": "Phone Number",
           "text": "Type your phone number here",
+          "function": "onChange",
+          "id": "login-phone",
           "secure": false
         },
         {
           "type": "text",
           "title": "Password",
           "text": "Type your phone number here",
+          "function": "onChange",
+          "id": "login-pass",
           "secure": true
         },
         {
@@ -21,14 +26,13 @@
           "text": "Submit",
           "accessibility": "Submit your details",
           "function": "submitLogin"
-        }
-      ],
-      "links": [
+        },
         {
+          "type": "link",
           "to": "Register",
           "text": "Don't have an account?"
         }
       ]
     }
-  }
+  ]
 }

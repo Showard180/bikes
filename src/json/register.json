@@ -1,0 +1,39 @@
+{
+  "title": "Register",
+  "components": [
+    {
+      "type": "form",
+      "shards": [
+        {
+          "type": "text",
+          "title": "Phone Number",
+          "text": "Enter Your Number Here",
+          "key-type": "phone-pad",
+          "function": "onChange",
+          "id": "register-phone"
+        },
+        {
+          "type": "text",
+          "title": "Name",
+          "text": "Enter Your Full Name Here",
+          "function": "onChange",
+          "id": "register-name"
+        },
+        {
+          "type": "text",
+          "title": "Password",
+          "text": "Enter Your Password Here",
+          "secure": true,
+          "function": "onChange",
+          "id": "register-pass"
+        },
+        {
+          "type": "button",
+          "text": "Submit",
+          "accessibility": "Submit Your Details",
+          "function": "submitRegister"
+        }
+      ]
+    }
+  ]
+}

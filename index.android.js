@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import {AppRegistry} from 'react-native';
 
-import App from './src/ios/index';
+import App from './src/app/index';
 
-AppRegistry.registerComponent('Bikes', () => App);
+const Bikes = () => (
+  <App device="android" />
+)
+
+AppRegistry.registerComponent('Bikes', () => Bikes);

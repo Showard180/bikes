@@ -6,14 +6,11 @@ import {
 } from 'react-native';
 
 const Container = props => (
-  <View
-    style={[Styles.container, Styles.background]}
-    resizeMode='cover'
-  >
-    <View style={Styles.container} />
-      <Text style={Styles.text}>{props.title}</Text>
-      {props.children}
-    <View style={Styles.container} />
+  <View style={[Styles.container]}>
+    <View style={[Styles.container]} />
+    <Text style={Styles.text}>{props.title}</Text>
+    {props.children}
+    <View style={[Styles.container]} />
   </View>
 )
 
@@ -21,12 +18,9 @@ const Styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  background: {
-    width: null,
-    height: null
-  },
   text: {
-    color: 'white',
+    marginBottom: 40,
+    color: 'black',
     alignSelf: 'center',
     fontSize: 30
   }
