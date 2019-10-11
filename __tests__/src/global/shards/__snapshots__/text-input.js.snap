@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`behaves correctly when an input is given 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "marginLeft": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 40,
+        "marginVertical": 10,
+      }
+    }
+  >
+    <TextInput
+      keyboardType={undefined}
+      onChangeText={[Function]}
+      placeholder={undefined}
+      secureTextEntry={undefined}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 1,
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "marginLeft": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 40,
+        "marginVertical": 10,
+      }
+    }
+  >
+    <TextInput
+      keyboardType={undefined}
+      onChangeText={[Function]}
+      placeholder={undefined}
+      secureTextEntry={undefined}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 1,
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders when given onChangeText props 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "marginLeft": 15,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 40,
+        "marginVertical": 10,
+      }
+    }
+  >
+    <TextInput
+      keyboardType={undefined}
+      onChangeText={[Function]}
+      placeholder={undefined}
+      secureTextEntry={undefined}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 1,
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders when given title and placeholder props 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "marginLeft": 15,
+      }
+    }
+  >
+    Text input test
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 40,
+        "marginVertical": 10,
+      }
+    }
+  >
+    <TextInput
+      keyboardType={undefined}
+      onChangeText={[Function]}
+      placeholder="Placehoder"
+      secureTextEntry={undefined}
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderWidth": 1,
+          "flex": 1,
+          "paddingHorizontal": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;

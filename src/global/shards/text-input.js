@@ -25,6 +25,8 @@ module.exports = props => (
 const Styles = StyleSheet.create({
   inputWrap: {
     marginVertical: 10,
+    marginLeft: 15,
+    marginRight: 15,
     height: 40,
     backgroundColor: 'transparent'
   },
@@ -32,9 +34,14 @@ const Styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     backgroundColor: 'white',
-    borderWidth: 1
+    borderWidth: 1,
+    borderRadius: 5
   },
   text: {
-    marginLeft: 15
+    marginLeft: 15,
+    color: 'white'
+  },
+  error: {
+    color: 'red'
   }
 })

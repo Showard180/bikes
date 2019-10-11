@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Text, View, AsyncStorage} from 'react-native';
+import {Text, View, AsyncStorage, Image} from 'react-native';
 import axios from 'axios';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 import Container from '../../global/containers/container';
 import Components from '../../global/components/index';
@@ -12,7 +13,8 @@ export default class LoginForm extends Component {
     super(props);
     this.state = {
       'login-phone': null,
-      'login-pass': null
+      'login-pass': null,
+      loading: true
     }
 
     this.submitLogin = this.submitLogin.bind(this);
@@ -28,16 +30,18 @@ export default class LoginForm extends Component {
           getAccessToken(res.data)
             .then(access => {
               AsyncStorage.setItem('access', access)
-              this.props.nav.push({title: 'UserProfile'});
+              this.props.nav.push({title: 'App'});
+              this.setState({ loading: false })
             })
             .catch(err => {
+              this.setState({ loading: false })
               console.log(err);
             });
         });
       })
       .catch(err => {
         console.log(err.response);
-        this.setState({err: err.response.data.message})
+        this.setState({err: err.response.data.message, loading: false})
         console.log(err);
       })
   }
@@ -52,37 +56,42 @@ export default class LoginForm extends Component {
       const access = await AsyncStorage.getItem('access');
       const refresh = await AsyncStorage.getItem('refresh');
       if(!userId || !refresh) {
-        console.log('hello');
+        this.setState({ loading: false })
         return;
       }
 
       if(!access) {
         getAccessToken({refresh, userId})
           .then(access => {
+            this.setState({ loading: false })
             AsyncStorage.setItem('access', access)
           })
           .catch(err => {
+            this.setState({ loading: false })
             return console.log(err);
           });
       } else {
         verifyAccessToken({access, userId})
           .then(res => {
-            this.props.nav.push({title: 'UserProfile'});
+            this.props.nav.push({title: 'App'});
+            this.setState({ loading: false })
           })
           .catch(err => {
-            console.log('getting access');
             getAccessToken({refresh, userId})
               .then(access => {
                 AsyncStorage.setItem('access', access)
-                this.props.nav.push({title: 'UserProfile'});
+                this.props.nav.push({title: 'App'});
+                this.setState({ loading: false })
               })
               .catch(err => {
+                this.setState({ loading: false })
                 console.log(err);
               });
           })
       }
 
     } catch (err) {
+      this.setState({ loading: false })
       console.log(err);
     }
   }
@@ -92,9 +101,23 @@ export default class LoginForm extends Component {
       title,
       components
     } = login;
-
     return (
       <Container title={title}>
+        <Spinner
+          visible={this.state.loading}
+          textContent={"Loading..."}
+          textStyle={{color: '#FFF'}}
+          overlayColor="#093b6f"
+        />
+        <Image
+        source={require('../profile/big-on-bikes.jpg')}
+        style={{
+          width: 150,
+          height: 112,
+          alignSelf: 'center',
+          marginBottom: 30
+        }}
+        />
         {
           components.map((component, i) => {
             const Main = Components[component.type];

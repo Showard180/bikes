@@ -17,7 +17,7 @@ export default class Nav extends Component {
     })
     const options = nav[title];
     const App = pages[options.component];
-    return <App nav={navigator} {...options}/>
+    return <App device='android' nav={navigator} {...options}/>
   }
 
   componentWillUnmount() {

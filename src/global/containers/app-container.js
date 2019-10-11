@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Spinner from 'react-native-loading-spinner-overlay';
 import {
   View,
   StyleSheet,
@@ -6,11 +7,15 @@ import {
 } from 'react-native';
 
 const Container = props => (
-  <View style={[Styles.container]}>
-    <View style={[Styles.container]} />
-    <Text style={Styles.text}>{props.title}</Text>
+  <View style={[Styles.container, props.background]}>
+      <Spinner
+      visible={props.loading}
+      textContent={"Loading..."}
+      textStyle={{color: '#FFF'}}
+      overlayColor="#093b6f"
+    />
+    <Text style={[Styles.text, props.titleColor]}>{props.title}</Text>
     {props.children}
-    <View style={[Styles.container]} />
   </View>
 )
 
@@ -21,7 +26,7 @@ const Styles = StyleSheet.create({
   },
   text: {
     marginBottom: 40,
-    color: 'white',
+    color: 'black',
     alignSelf: 'center',
     fontSize: 30
   }

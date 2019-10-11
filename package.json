@@ -5,17 +5,31 @@
   "proxy": "http://localhost:8080",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test:o": "jest",
+    "test": "jest --watch"
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "dot": "^1.1.2",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "0.43.4"
+    "react-native": "0.43.4",
+    "react-native-datepicker": "^1.6.0",
+    "react-native-hyperlink": "0.0.11",
+    "react-native-loading-spinner-overlay": "^0.5.2",
+    "type": "0.0.3",
+    "validate": "^3.0.1"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "enzyme-to-json": "^1.5.1",
     "jest": "19.0.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-native-display": "^1.0.8",
+    "react-native-scrollable-tab-view": "0.6.0",
     "react-test-renderer": "16.0.0-alpha.6"
   },
   "jest": {

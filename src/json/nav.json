@@ -9,9 +9,9 @@
     "component": "RegisterForm",
     "navigationBarHidden": false
   },
-  "UserProfile": {
-    "title": "UserProfile",
-    "component": "UserProfile",
+  "App": {
+    "title": "App",
+    "component": "App",
     "navigationBarHidden": true
   }
 }

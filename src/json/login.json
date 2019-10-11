@@ -16,7 +16,7 @@
         {
           "type": "text",
           "title": "Password",
-          "text": "Type your phone number here",
+          "text": "Type your password here",
           "function": "onChange",
           "id": "login-pass",
           "secure": true
@@ -24,13 +24,14 @@
         {
           "type": "button",
           "text": "Submit",
+          "color": "white",
           "accessibility": "Submit your details",
           "function": "submitLogin"
         },
         {
           "type": "link",
           "to": "Register",
-          "text": "Don't have an account?"
+          "text": "New user?"
         }
       ]
     }

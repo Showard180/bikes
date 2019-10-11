@@ -1,0 +1,33 @@
+{
+  "title": "",
+  "components": [
+    {
+      "type": "form",
+      "shards": [
+        {
+          "type": "text",
+          "title": "Bike make",
+          "text": "Type the make of your bike here",
+          "function": "valueChange",
+          "id": "bike-make",
+          "secure": false
+        },
+        {
+          "type": "text",
+          "title": "Bike model",
+          "text": "Type the model of your bike here",
+          "function": "valueChange",
+          "id": "bike-model",
+          "secure": false
+        },
+        {
+          "type": "button",
+          "text": "Submit",
+          "color": "white",
+          "accessibility": "Use this bike",
+          "function": "submitBike"
+        }
+      ]
+    }
+  ]
+}

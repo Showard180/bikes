@@ -1,0 +1,12 @@
+{
+  "pages": [
+    {
+      "title": "Profile",
+      "page": "UserProfile"
+    },
+    {
+      "title": "Service",
+      "page": "ServiceBook"
+    }
+  ]
+}

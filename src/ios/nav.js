@@ -6,13 +6,17 @@ import pages from '../app/pages';
 
 
 export default class IOSNav extends Component {
-  renderScene({title}) {
+  renderScene({title}, option = 'push') {
     const options = nav[title];
-    this.refs.nav.push({
+    this.refs.nav[option]({
       ...options,
       component: pages[options.component],
-      passProps: {nav: {push: title => this.renderScene(title)}}
+      passProps: {device: 'ios', nav: {push: title => this.renderScene(title), replace: this.replace.bind(this)}}
     });
+  }
+
+  replace({title}) {
+    this.renderScene({title}, 'replace')
   }
 
   render() {
@@ -21,7 +25,7 @@ export default class IOSNav extends Component {
         ref="nav"
         initialRoute={{
           title: "Login",
-          passProps: {nav: {push: title => this.renderScene(title)}},
+          passProps: {nav: {push: title => this.renderScene(title)}, device: this.props.device},
           component: pages.LoginForm,
           navigationBarHidden: true
         }}

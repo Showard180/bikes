@@ -8,6 +8,7 @@ import {register} from '../../json';
 
 export default class RegisterForm extends Component {
   constructor(props) {
+    console.log(props.device);
     super(props);
     this.state = {
       'register-phone': null,
@@ -28,7 +29,7 @@ export default class RegisterForm extends Component {
         this.props.nav.push({title: 'Login'});
       })
       .catch(err => {
-        console.log(err);
+        this.setState({error: err.response.data.message});
       })
   }
 
@@ -41,6 +42,7 @@ export default class RegisterForm extends Component {
       title,
       components
     } = register;
+    console.log(this.state.error);
     return (
       <Container title={title}>
         {
@@ -50,6 +52,7 @@ export default class RegisterForm extends Component {
               <Main
                 {...component}
                 nav={this.props.nav}
+                err={this.state.error}
                 key={i}
                 functions={{
                   submitRegister: this.submitRegister,

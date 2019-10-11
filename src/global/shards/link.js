@@ -8,6 +8,7 @@ module.exports = props => (
 const Styles = StyleSheet.create({
   link: {
     alignSelf: 'center',
+    color: 'white',
     marginTop: 30
   }
 });

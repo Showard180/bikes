@@ -30,6 +30,7 @@
         {
           "type": "button",
           "text": "Submit",
+          "color": "white",
           "accessibility": "Submit Your Details",
           "function": "submitRegister"
         }

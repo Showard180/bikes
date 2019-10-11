@@ -1,5 +1,6 @@
 module.exports = {
-  text: require('./text-input.js'),
-  button: require('./button.js'),
-  link: require('./link.js')
+  text: require('./text-input'),
+  button: require('./button'),
+  link: require('./link'),
+  info: require('./info')
 };

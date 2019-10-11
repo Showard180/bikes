@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `<View />`;
+
+exports[`renders an error when given one in props 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "red",
+        "marginBottom": 30,
+      }
+    }
+  >
+    This is a test error
+  </Text>
+</View>
+`;
+
+exports[`renders an input when one given in props 1`] = `
+<View>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "marginLeft": 15,
+        }
+      }
+    >
+      Write here for a test
+    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "height": 40,
+          "marginVertical": 10,
+        }
+      }
+    >
+      <TextInput
+        keyboardType={undefined}
+        onChangeText={[Function]}
+        placeholder="This is a test"
+        secureTextEntry={undefined}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderWidth": 1,
+            "flex": 1,
+            "paddingHorizontal": 10,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</View>
+`;
