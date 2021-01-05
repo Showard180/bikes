@@ -9,7 +9,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "dot": "^1.1.2",
     "moment": "^2.20.1",
     "prop-types": "^15.6.0",
