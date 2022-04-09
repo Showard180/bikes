@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "dot": "^1.1.2",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.4",
